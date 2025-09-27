@@ -14,7 +14,7 @@ Those commands were extracted from firmware [v1.1.0](http://www.szzotek.com/h-co
 | *ESE | | |
 | *ESE? | | |
 | *ESR? | | |
-| *IDN? | ZOYI,ZT-DQ02,903D9C87,V1.1.0 | |
+| *IDN? | ZOYI,ZT-DQ02,903D9C87,V1.1.0 | Get device identity |
 | *OPC | | |
 | *OPC? | | |
 | *RST | | |
@@ -43,28 +43,27 @@ Those commands were extracted from firmware [v1.1.0](http://www.szzotek.com/h-co
 | :STATus:QUEStionable:ENABle? | 65535 | |
 | :STATus:QUEStionable:ENABle PARAM | | |
 | :STATus:PRESet | | |
-| :FETCh? | 100.05,-0.0101,R,R,X,SER,SER,SLOW,AUTO,1000,600,0,0,R,1.0000e3,5.0,0 | |
+| :FETCh? | 100.05,-0.0101,R,R,X,SER,SER,SLOW,AUTO,1000,600,0,0,R,1.0000e3,5.0,0 | Get readings |
 | :FREQuency? | | |
-| :FREQuency | | Change `Freq` |
+| :FREQuency | | Cycle `Freq` between 100Hz/120Hz/1kHz/10kHz/100kHz |
 | :VOLTage? | | |
-| :VOLTage | | Change `Level` |
+| :VOLTage | | Cycle `Level` between 0.1V/0.3V/0.6V |
 | :BIAS:VOLTage? | | |
-| :BIAS:VOLTage | | Change `Bias` |
+| :BIAS:VOLTage | | Cycle `Bias` between 0.0V/0.5V and will affect `Level` |
 | :APERture? | | |
-| :APERture | | Change `Speed` |
+| :APERture | | Cycle `Speed` between Slow/Mid/Fast |
 | :FUNCtion:IMPedance:MAIN? | | |
-| :FUNCtion:IMPedance:MAIN | | Change `Function` |
+| :FUNCtion:IMPedance:MAIN | | Cycle `Function` between AUTO/R/C/L/Z/ECAP/BATT |
 | :FUNCtion:IMPedance:SUB? | | |
+| :FUNCtion:IMPedance:SUB | | Cycle `Sub-function` X/D/Q/θ/ESR |
 | :FUNCtion:IMPedance:Model? | | |
-| :FUNCtion:IMPedance:Model | | Change `Model`|
+| :FUNCtion:IMPedance:Model | | Cycle `Model` between AUTO/SER/PAR |
 | :FUNCtion:IMPedance:RANGe? | | |
-| :FUNCtion:IMPedance:RANGe | | Change `Range` |
+| :FUNCtion:IMPedance:RANGe | | Cycle `Range` between AUTO/100Ω/1kΩ/10kΩ/100kΩ |
 | :COMParator? | | |
-| :COMParator | | |
+| :COMParator | | Enable comparator mode |
 | :COMParator:NOMinal? | | |
-| :COMParator:NOMinal PARAM | | |
 | :COMParator:RANGe? | | |
 | :COMParator:RESult? | | |
-| :COMParator:ERRor PARAM | | |
-| :USeRERRor | | |
-| :DATA:BLOB PARAM | | |
+| :COMParator:NOMinal PARAM | | Example: `:COMParator:NOMinal 100` will set 100 Ohm as nominal value |
+| :COMParator:ERRor PARAM | | Example: `:COMParator:ERRor 0.1` will set 0.1% as tolerance value |
